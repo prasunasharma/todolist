@@ -5,7 +5,7 @@ def index(request):
     todo = Todo.objects.all()
     if request.method == 'POST':
          new_todo = Todo(
-         title = request.POST['title']
+         title = request.POST['titles']
        )
          new_todo.save()
          return redirect('/')
